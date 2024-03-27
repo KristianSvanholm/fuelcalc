@@ -14,19 +14,19 @@
       </div>
     </v-app-bar>
     <v-main>
-      <HelloWorld/>
+      <FuelCalc/>
     </v-main>
   </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld';
+import FuelCalc from './components/FuelCalc';
 
 export default {
   name: 'App',
 
   components: {
-    HelloWorld,
+    FuelCalc,
   },
 
   data: () => ({

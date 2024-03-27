@@ -26,7 +26,7 @@
             <h1>{{item.name}} </h1>
             Energi: {{Math.round(item.byMass * slider)}} kWh <br/>
             Volum: {{Math.round((item.byMass * slider)/item.byVolume)}} liter <br/>
-            Utslipp: {{Math.round((item.byMass * slider)/item.byVolume*item.co2l)}}<br/>
+            Utslipp: {{Math.round((item.byMass * slider)/item.byVolume*item.co2l)}} kg <br/>
         </v-card>
     </div>
     <br/>
@@ -46,7 +46,7 @@
 
 <script>
   export default {
-    name: 'HelloWorld',
+    name: 'FuelCalc',
 
     data: () => ({
         radios: "liter",
