@@ -44,6 +44,8 @@
     <ul>
         <li>Hydrogen i væske form krever ~36% av sin egen energi for kjøling.</li>
         <li>Li-Ion tallene er basert på Tesla Model S.</li>
+        <li>Alle priser er tatt fra det tyske markedet.</li>
+        <li>Pris pr kwh bilbatteri er ikke satt da dette er ekstremt bevegelig</li>
     </ul>
     </v-card>
 </template>
