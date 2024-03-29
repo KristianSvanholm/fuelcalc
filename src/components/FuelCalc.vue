@@ -17,18 +17,20 @@
         <v-card class="fuel" width="350px" outlined shaped v-for="(item, key) in fuels" :key=key>
             <h1>{{item.name}} </h1>
             Energi: {{Math.round(item.byVolume * slider)}} kWh <br/>
-            Masse: {{Math.round((item.byVolume * slider)/item.byMass)}} kg <br/>
-            Utslipp: {{Math.round(item.co2l * slider)}} kg <br/>
-            Pris: {{Math.round((item.byVolume * slider)/item.byMass * item.pricekg)}} € <br/>
-        </v-card>
+            Masse: {{decimals((item.byVolume * slider)/item.byMass)}} kg <br/>
+            Utslipp: {{decimals(item.co2l * slider)}} kg <br/>
+            Pris: {{decimals((item.byVolume * slider)/item.byMass * item.pricekg)}} € <br/>
+            Pris / kwh: {{decimals(item.pricekg / item.byMass)}} € 
+         </v-card>
     </div>
     <div v-else class="container">
         <v-card class="fuel" width="350px" outlined shaped v-for="(item, key) in fuels" :key=key>
             <h1>{{item.name}} </h1>
-            Energi: {{Math.round(item.byMass * slider)}} kWh <br/>
-            Volum: {{Math.round((item.byMass * slider)/item.byVolume)}} liter <br/>
-            Utslipp: {{Math.round((item.byMass * slider)/item.byVolume*item.co2l)}} kg <br/>
-            Pris: {{Math.round(slider * item.pricekg)}} € <br/>
+            Energi: {{decimals(item.byMass * slider)}} kWh <br/>
+            Volum: {{decimals((item.byMass * slider)/item.byVolume)}} liter <br/>
+            Utslipp: {{decimals((item.byMass * slider)/item.byVolume*item.co2l)}} kg <br/>
+            Pris: {{decimals(slider * item.pricekg)}} € <br/>
+            Pris / kwh: {{decimals(item.pricekg / item.byMass)}} €
         </v-card>
     </div>
     <br/>
@@ -104,6 +106,11 @@
             },
         ]
     }),
+      methods: {
+        decimals(num){
+            return Math.round(num*100) / 100
+        },
+      },
       computed: {
         sliderLimit: function() {
             if (this.radios == "liter") {
