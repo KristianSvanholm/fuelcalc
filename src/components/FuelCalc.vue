@@ -60,11 +60,6 @@
     <a href="https://www.cargopedia.net/europe-fuel-prices">diesel and gas price cargopedia.net 25.03.24</a><br/>
     <a href="http://www.h2data.de/">h2Data.de</a><br/>
     <a href="https://www.nrel.gov/docs/fy19osti/73010.pdf">nrel gov - h2 fuel efficiency 14.04.14</a><br/><br/>
-    Notater<br/>
-    <ul>
-        <li>Hydrogen i væske form krever ~36% av sin egen energi for kjøling.</li>
-        <li>Li-Ion tallene er basert på Tesla Model S.</li>
-    </ul>
     </v-card>
 </template>
 
