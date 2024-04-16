@@ -12,7 +12,7 @@
 
     <div class="container"> 
         <v-card class="fuel" width="350px" outlined shaped>
-            <h1> Hydrogen (700 bar) </h1>
+            <h1> Hydrogen - FCEV </h1>
             tank: {{decimals(hydrogen.kgpkm * dist)}} kg <br/>
             Pris: {{decimals(hydrogen.pricekg * hydrogen.kgpkm * dist)}} kr <br/> 
             Utslipp: {{decimals(0)}} kg Co2 <br/>
@@ -79,7 +79,7 @@
             name: "Diesel",
             kwhpl: 10,
             co2l: 2.7,
-            pricel: 22,
+            pricel: 20.90,
             kmpl: 20.92,
             lpkm: 0.06,
         },
@@ -87,7 +87,7 @@
             name: "Bensin",
             kwhpl: 8.8,
             co2l: 2.3,
-            pricel: 24,
+            pricel: 21.99,
             lpkm: 0.07,
         },
     }),
